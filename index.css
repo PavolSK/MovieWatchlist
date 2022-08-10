@@ -253,6 +253,7 @@ form button:disabled {
 
     header h1{
         font-size: 1.8rem;
+        margin-right: 15px;
     }
 
     header a {
