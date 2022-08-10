@@ -1,0 +1,310 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+body {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Typography */
+header h1,
+header a {
+    color: #fff;
+    text-shadow: 0px 0px 5px black;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    margin-top: 8px;
+}
+
+header a:hover,
+header a:focus {
+    color: #00FF00;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+button {
+    font-size: 1.1rem;
+    padding: 0.2em 1em;
+    font-family: "Inter";
+    color: #000;
+    font-weight: 600;
+}
+
+p {
+    margin: 8px 0;
+    font-size: 1.2rem;
+}
+
+
+
+/* Typography movie info */
+.movie-genre p {
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.movie-header h3 {
+    font-size: 1.5rem;
+}
+
+.movie-genre button {
+    border: 0;
+    padding: 5px 15px;
+    background: #fff;
+    font-size: 1.2rem;
+}
+
+/* Layout */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background: url("img/movies.jpg");
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+    padding: 30px 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Form layout */
+form {
+    width: 100%;
+    padding: 0;
+    position: relative;
+    bottom: -3.8em;
+    display: flex;
+}
+
+form input {
+    width: 80%;
+    margin: 0;
+    border-top-left-radius: 15px; 
+    border-bottom-left-radius: 15px; 
+    border: 1px solid #666;
+    background: #fff;
+    font-size: 1.5rem;
+}
+
+input::placeholder {
+    font-weight: 400;
+}
+
+form button {
+    width: 20%;
+    min-width: 90px;
+    margin: 0;
+    border-top-right-radius: 15px; 
+    border-bottom-right-radius: 15px; 
+    border: 1px solid #666;
+    background: #fff;
+    font-size: 1.5rem;
+}
+
+form input:disabled,
+form button:disabled {
+    cursor: wait;
+}
+
+
+/* Searching placeholder */
+
+.movies-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vh;
+    opacity: 0.5;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.movies-placeholder img {
+    max-width: 200px;
+}
+
+.movies-placeholder p {
+    margin-top: 0;
+    color: black;
+}
+
+#saved-movies > p {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#saved-movies > p > a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    background: #DDD;
+    padding: 0.5em 1em;
+    border-radius: 40px;
+    font-weight: 600;
+}
+
+#saved-movies a:hover,
+#saved-movies a:focus {
+    background: #BBB; 
+}
+
+/* Movies layout */
+#one-movie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px;
+}
+
+#one-movie:first-of-type {
+    padding: 40px 0 10px;
+}
+
+#one-movie img {
+    max-width: 30%;
+    max-height: 250px;
+    margin: 0 auto;
+}
+
+.movie-info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Movie info section layout */
+.movie-header {
+    display: flex;
+    align-items: center;
+}
+
+.movie-header h3 {
+    margin: 0;
+    margin-right: 20px;
+}
+
+.movie-genre {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media queries */
+/* Change width of form */
+@media screen and (max-width: 750px) {
+    form input {
+        width: 70%;
+    }
+
+    form button {
+        width: 30%;
+    }
+  }
+
+  /* Change of font sizes movie section */
+  @media screen and (max-width: 660px) {
+    .movie-genre p {
+        font-size: 1rem;
+    }
+    
+    .movie-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .movie-genre button {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    header {
+        padding: 30px 0px;
+    }
+
+    header h1{
+        font-size: 1.8rem;
+    }
+
+    header a {
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+
+    form input,
+    form button {
+        font-size: 1.3rem;
+    }
+
+    #one-movie {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #one-movie img {
+        margin-bottom: 10px;;
+    }
+
+    .movie-info {
+        width: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    form input {
+        border-radius: 15px;
+        width: 100%;
+    }
+
+    form button {
+        border-radius: 15px;
+        width: 45%;
+        margin-top: 15px;
+    }
+
+    .movies-placeholder {
+        margin-top: 10vh;
+    }
+
+    .movies-placeholder img {
+        max-width: 100px;
+    }
+
+    #saved-movies > p > a {
+        font-size: 1rem;
+    }
+  }

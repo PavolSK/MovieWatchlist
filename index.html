@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <div class="container flex">
+                <h1>Find your movie</h1>
+                <a href="watchlist.html">My watchlist</a>
+            </div>
+            <div class="container">
+                <form id="search-form">
+                    <input type="text" placeholder="🔎 Search for a movie" id="movie-title">
+                    <button id="btn-search">Search</button>
+                </form>
+            </div>
+        </header>
+        <main>
+            <div id="founded-movies" class="container">
+                <div class="movies-placeholder">
+                    <img src="img/movie-icon.png">
+                    <p>Start exploring</p>
+                </div>
+            </div>
+        </main>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
